@@ -6,8 +6,8 @@ This problem provides practice at:
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Greg Wenning.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -136,6 +136,18 @@ def run_test_practice_problem3():
     #             that they are adequate tests!
     ###########################################################################
 
+    # Test 15:
+    answer = practice_problem3(-5, 2, 0)
+    Expected = [-5, -4]
+    print('Expected: ', Expected)
+    print('Actual: ', answer)
+
+    # Test 16:
+    answer = practice_problem3(-3, 2, -1)
+    Expected = [-1, 0]
+    print('Expected: ', Expected)
+    print('Actual: ', answer)
+
 
 def practice_problem3(start, n, threshold):
     """
@@ -209,7 +221,7 @@ def practice_problem3(start, n, threshold):
       :type threshold: float
     """
     ###########################################################################
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #          Some tests are already written for you (above),
     #          but you are required to write ADDITIONAL tests (above).
     ###########################################################################
@@ -217,6 +229,22 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ###########################################################################
+    import math
+    list1 = []
+    total2 = 0
+    while True:
+        sum1 = math.sin(start)
+        sum2 = math.cos(start)
+        total = sum1 + sum2
+        if total > threshold:
+            list1 = list1 + [start]
+            total2 = total2 + 1
+        if total2 == n:
+            return list1
+        start = start + 1
+
+
+
 
 
 # -----------------------------------------------------------------------------
